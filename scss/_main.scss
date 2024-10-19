@@ -1,0 +1,67 @@
+main{
+    width: 100%;
+    padding-left: 5px ;
+
+    h2{
+        background-color: aqua;
+        position: sticky;
+        top:65px;
+    }
+
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+
+        img{
+            max-width: 33%;
+            height: auto;
+           // flex-basis: calc(33.33% - 10px); 
+            box-sizing: border-box;
+        }
+    }
+
+    .fruit-hover{
+        figure{
+            position: relative; /* 确保 figcaption 相对 figure 定位 */
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            width: 33%;
+            height: auto;
+        }
+
+        /* figcaption 绝对定位，放置在左上角 */
+        figcaption {
+            position: absolute;
+            top: 0; /* 距离顶部 0px */
+            left: 0; /* 距离左侧 0px */
+            display: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        img:hover + figcaption{
+            display: block;
+            background-color: red;
+            color: white;
+         }
+    }
+
+    .back-to-top-btn{
+        display: flex;
+        justify-content: end;
+        position:fixed;
+        right:0;
+        bottom: 0;
+        a{
+            background-color: black;
+            color: white;
+            padding: 10px 5px 10px 5px;
+        }
+    }
+    
+}

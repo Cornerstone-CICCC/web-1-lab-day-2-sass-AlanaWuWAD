@@ -1,0 +1,11 @@
+@use './header';
+@use './footer';
+@use './main';
+@use './responsive';
+
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0 ;
+}
